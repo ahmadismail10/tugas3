@@ -189,6 +189,7 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
 
   10. Mengaktifkan untuk menshare dari Host to Guest OS
 	Langkah langkahnya 
+
 		1. Pada bagian Device  -> Insert Guest Additions CD Image
 
 		2. My Computer -> My Network Places -> Add a network place
@@ -199,7 +200,7 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
 
 ![Konfigurasi Cuckoo](instalasi/22.png)
 
-  11. Mengcopy agent.py yang terdapat dalam folder cuckoo/agent kedalam folder sharenya tersebut dan nantinya dari sana akan dipindah lagi ke C:\\Documents and Settings\All Users\Start Menu\Programs\Startup
+  11. Mengcopy agent.py yang terdapat dalam folder cuckoo/agent kedalam folder sharenya tersebut dan nantinya dari sana akan dipindah lagi ke `C:\\Documents and Settings\All Users\Start Menu\Programs\Startup`
 ![Lokasi file Agent.py](instalasi/agent.png)
 ![Agent ketika dijalankan](instalasi/runningAgent.png)
   
@@ -211,6 +212,7 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
 	```
   13. Konfigurasi Cuckoo
 	1. file cuckoo.conf
+
 		```
 		machinery = virtualbox
 		[resultserver]
@@ -244,18 +246,20 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
 		snapshot = snapshot1 # name of snapshot
 		```
 	4. file report.conf
+
 		```
 		[mongodb]
 		enabled = yes
 		```
-  14a. run cuckoo pada terminal
+  14. run cuckoo pada terminal
+
 	```
 	$ cd /home/cuckoo/cuckoo
 	$ python cuckoo.py
 	```
 ![Cuckoo](instalasi/cuckooTerminal.png)
 	
-  14b. run cuckoo pada web interface
+  15. run cuckoo pada web interface
 	```
 	$ cd /home/cuckoo/cuckoo/web
 	$ python manage.py runserver
