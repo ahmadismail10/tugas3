@@ -12,7 +12,7 @@
 
 #### Penjelasan Tugas
 **Tugas 3 :**
-* Instal Cuckko Sandbox
+* Instal Cuckoo Sandbox
 * Analisislah malware yang terdapat pada file dengan tipe .xls
 
 
@@ -20,10 +20,10 @@
 ## Dasar Teori
 
 
-**1. Cuckko Sandbox**
+**1. Cuckoo Sandbox**
 
-* **Cuckko Sandbox** adalah 
-salah satu sistem yang digunakan untuk mengalisa malware / file yang mencurigakan yang terdapat didalam system dan memberikan hasil yang terperinci mengenai apa yang terjadi dan apa yang telah dilakukan oleh malware / file yang mencurigakan tersebut dalam hitungan detik.Cuccko ini biasanya digunakan untuk mengetes malware yang ada didalam suatu lingkungan yang terisolasi.Dapat dijalankan diatas multiplaform OS.(https://cuckoosandbox.org)
+* **Cuckoo Sandbox** adalah 
+salah satu sistem yang digunakan untuk mengalisa malware / file yang mencurigakan yang terdapat didalam system dan memberikan hasil yang terperinci mengenai apa yang terjadi dan apa yang telah dilakukan oleh malware / file yang mencurigakan tersebut dalam hitungan detik.Cuckoo ini biasanya digunakan untuk mengetes malware yang ada didalam suatu lingkungan yang terisolasi.Dapat dijalankan diatas multiplaform OS.(https://cuckoosandbox.org)
 
 * **Malware** adalah 
 suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi dengan menggunakan code tertentu yang digunakan untuk mengambil data yang sensitif, atau mengganggu jalannya operasi komputer, atau mendapatkan suatu hak akses khusus, atau menampilkan iklan iklan yang tidak diinginkan. (https://en.wikipedia.org/wiki/Malware)
@@ -33,9 +33,9 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
 
 ## Persiapan
 
-#### 1. Langkah Instalasi Cuccko
+#### 1. Langkah Instalasi Cuckoo
 
-  1. Pada Host OS(dalam kasus ini kami menggunakan host OS berbasis Linux) dengan menggunakan perintah untuk menginstall software - software prasyarat yang akan nantinya digunakan oleh Cuccko
+  1. Pada Host OS(dalam kasus ini kami menggunakan host OS berbasis Linux) dengan menggunakan perintah untuk menginstall software - software prasyarat yang akan nantinya digunakan oleh Cuckoo
   ```
   $ sudo apt-get install git mongodb libffi-dev build-essential python-django python python-dev python-pip python-pil python-sqlalchemy python-bson python-dpkt python-jinja2 python-magic python-pymongo python-gridfs python-libvirt python-bottle python-pefile python-chardet tcpdump -y
   ```
@@ -111,18 +111,18 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
   ```
 ![Konfigurasi Cuckoo](instalasi/14.png)
   
-  8. Mendownload dan menginstall Cuccko
+  8. Mendownload dan menginstall Cuckoo
   ```
   $ git clone git://github.com/cuckoosandbox/cuckoo.git
   ```
 ![Konfigurasi Cuckoo](instalasi/15.png)
   
-  9. Menambahkan user Cuccko
+  9. Menambahkan user Cuckoo
   ```
   $ useradd cuckoo
   ```
 
-  10. Memastikan bahwa user yang merun Cuccko ada user tersebut 
+  10. Memastikan bahwa user yang merun Cuckoo ada user tersebut 
   ```
   $ chown -R cuckoo:cuckoo /home/cuckoo/cuckoo
   ```
@@ -153,11 +153,11 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
 	$ vboxmanage modifyvm "windowsxp" --hostonlyadapter1 vboxnet0
 	```
 	
-  4. Membuat folder share yang digunakan untuk mentransfer data(Cuccko agent) dari Host to Guest OS
+  4. Membuat folder share yang digunakan untuk mentransfer data(Cuckoo agent) dari Host to Guest OS
 	```
 	$ mkdir -p /home/cuckoo/VirtualBox VMs/windowsxpshare
 	$ vboxmanage sharedfolder add "windowsxp" --name "windowsxpshare" --hostpath /home/cuckoo/VirtualBox VMs/windowsxpshare --automount 
-	$ cp /home/cuckoo/cuckoo/agent/agent.py /home/cuckoo/VirtualBox VMs/windowsxpshare/agent.pyw
+	$ cp /home/cuckoo/cuckoo/agent/agent.py /home/cuckoo/VirtualBox VMs/windowsxpshare/agent.py
 	```
 	
   5. Mengisolasi seluruh network dengan guest OS dengan cara Host-Only adapter 
@@ -181,7 +181,8 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
 ![Konfigurasi Cuckoo](instalasi/19.png)
 ![Konfigurasi Cuckoo](instalasi/20.png)
 
-  9. Menginstall Python 2.7 dan Python Imaging Library for windows 
+  9. Menginstall Python 2.7
+![Installasi Python di Guest OS](instalasi/pythonGuest.png)
 
   10. Mengaktifkan untuk menshare dari Host to Guest OS
 	Langkah langkahnya 
@@ -192,7 +193,9 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
 		4. windowsxpshare on Vboxsrv
 ![Konfigurasi Cuckoo](instalasi/22.png)
 
-  11. Mengcopy agent.py yang terdapat dalam folder cuckoo/agent kedalam folder sharenya tersebut dan nantinya dari sana akan dipindah lagi ke C:Documents and SettingsAll UsersStart MenuProgramsStartup
+  11. Mengcopy agent.py yang terdapat dalam folder cuckoo/agent kedalam folder sharenya tersebut dan nantinya dari sana akan dipindah lagi ke C:\\Documents and Settings\All Users\Start Menu\Programs\Startup
+![Lokasi file Agent.py](instalasi/agent.png)
+![Agent ketika dijalankan](instalasi/runningAgent.png)
   
   12. Mengambil Snapshot
 	```
@@ -200,7 +203,7 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
 	$ vboxmanage controlvm "windowsxp" poweroff
 	$ vboxmanage snapshot "windowsxp" restorecurrent
 	```
-  13. Konfigurasi Cuccko
+  13. Konfigurasi Cuckoo
 	1. file cuckoo.conf
 		```
 		machinery = virtualbox
@@ -244,13 +247,15 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
 	$ cd /home/cuckoo/cuckoo
 	$ python cuckoo.py
 	```
+![Cuckoo](instalasi/cuckooTerminal.png)
 	
   14b. run cuckoo pada web interface
 	```
 	$ cd /home/cuckoo/cuckoo/web
-	$ python manage.py runserver 0.0.0.0:8000
+	$ python manage.py runserver
 	```
 	
+![Web Interface Cuckoo](instalasi/WebInterfaceCuckoo.png)
   
 	
 **Skenario 1** : 
