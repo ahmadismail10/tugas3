@@ -39,14 +39,14 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
   ```
   $ sudo apt-get install git mongodb libffi-dev build-essential python-django python python-dev python-pip python-pil python-sqlalchemy python-bson python-dpkt python-jinja2 python-magic python-pymongo python-gridfs python-libvirt python-bottle python-pefile python-chardet tcpdump -y
   ```
-![Konfigurasi Cuckoo](instalasi/2.png)
+![Konfigurasi Cuckoo](instalasi/2.PNG)
 
   2. Mengkonfigurasi Tcpdump
   ```
   $ $ sudo setcap cap_net_raw,cap_net_admin=eip /usr/sbin/tcpdump
   $ getcap /usr/sbin/tcpdump
   ```
-![Konfigurasi Cuckoo](instalasi/3.png)
+![Konfigurasi Cuckoo](instalasi/3.PNG)
 
   3. Menginstall Yara dan memvalidasinya 
   ```
@@ -60,8 +60,8 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
 	$ sudo make install
 	$ yara -v
   ```
-![Konfigurasi Cuckoo](instalasi/5.png)
-![Konfigurasi Cuckoo](instalasi/6.png)
+![Konfigurasi Cuckoo](instalasi/5.PNG)
+![Konfigurasi Cuckoo](instalasi/6.PNG)
 
   4. Menginstal extensi yara-python dan validasinya
   ```
@@ -70,7 +70,7 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
   $ sudo python setup.py install
   $pip show yara-python
   ```
-![Konfigurasi Cuckoo](instalasi/7.png)
+![Konfigurasi Cuckoo](instalasi/7.PNG)
 
   5. Menginstall Pydeep dan validasi
   ```
@@ -84,10 +84,10 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
   $ pip install pydeep
   $ pip show pydeep
   ```
-![Konfigurasi Cuckoo](instalasi/4.png)
-![Konfigurasi Cuckoo](instalasi/8.png)
-![Konfigurasi Cuckoo](instalasi/9.png)
-![Konfigurasi Cuckoo](instalasi/10.png)
+![Konfigurasi Cuckoo](instalasi/4.PNG)
+![Konfigurasi Cuckoo](instalasi/8.PNG)
+![Konfigurasi Cuckoo](instalasi/9.PNG)
+![Konfigurasi Cuckoo](instalasi/10.PNG)
 
   6. Menginstall prasyarat Volatility yang digunakan untuk analisis forensik pada memory dumps. Seperti openpyxl,ujson,pycrypto,distorm3,pytz
   ```
@@ -97,9 +97,9 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
   $ pip install distorm3
   $ pip install pytz 
   ```
-![Konfigurasi Cuckoo](instalasi/11.png)
-![Konfigurasi Cuckoo](instalasi/12.png)
-![Konfigurasi Cuckoo](instalasi/13.png)
+![Konfigurasi Cuckoo](instalasi/11.PNG)
+![Konfigurasi Cuckoo](instalasi/12.PNG)
+![Konfigurasi Cuckoo](instalasi/13.PNG)
 
   7. Menginstall dan validasi Volatility
   ```
@@ -109,13 +109,13 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
   $ python setup.py install
   $ python vol.py -h
   ```
-![Konfigurasi Cuckoo](instalasi/14.png)
+![Konfigurasi Cuckoo](instalasi/14.PNG)
   
   8. Mendownload dan menginstall Cuckoo
   ```
   $ git clone git://github.com/cuckoosandbox/cuckoo.git
   ```
-![Konfigurasi Cuckoo](instalasi/15.png)
+![Konfigurasi Cuckoo](instalasi/15.PNG)
   
   9. Menambahkan user Cuckoo
   ```
@@ -133,7 +133,7 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
 	```
 	$ sudo apt-get install vitualbox
 	```
-![Konfigurasi Cuckoo](instalasi/16.png)
+![Konfigurasi Cuckoo](instalasi/16.PNG)
 
   2. menambahkan user cuckoo kedalam vboxuser group
 	```
@@ -175,10 +175,13 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
 ![Konfigurasi Cuckoo](instalasi/17.jpg)
   
   7. Mengkonfigurasi guest OS network
+
 ![Konfigurasi Cuckoo](instalasi/18.png)
 
   8. Mematikan Windows Update dan Windows Firewall
+
 ![Konfigurasi Cuckoo](instalasi/19.png)
+
 ![Konfigurasi Cuckoo](instalasi/20.png)
 
   9. Menginstall Python 2.7
@@ -187,10 +190,13 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
   10. Mengaktifkan untuk menshare dari Host to Guest OS
 	Langkah langkahnya 
 		1. Pada bagian Device  -> Insert Guest Additions CD Image
-		![Konfigurasi Cuckoo](instalasi/21.png)
+
 		2. My Computer -> My Network Places -> Add a network place
+
 		3. Click Browse
+
 		4. windowsxpshare on Vboxsrv
+
 ![Konfigurasi Cuckoo](instalasi/22.png)
 
   11. Mengcopy agent.py yang terdapat dalam folder cuckoo/agent kedalam folder sharenya tersebut dan nantinya dari sana akan dipindah lagi ke C:\\Documents and Settings\All Users\Start Menu\Programs\Startup
@@ -255,7 +261,7 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
 	$ python manage.py runserver
 	```
 	
-![Web Interface Cuckoo](instalasi/WebInterfaceCuckoo.png)
+![Web Interface Cuckoo](instalasi/webInterfaceCuckoo.png)
   
 	
 **Skenario 1** : 
