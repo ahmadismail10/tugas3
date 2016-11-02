@@ -211,6 +211,7 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
 	```
   13. Konfigurasi Cuckoo
 	1. file cuckoo.conf
+
 		```
 		machinery = virtualbox
 		[resultserver]
