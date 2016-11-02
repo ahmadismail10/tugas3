@@ -187,8 +187,7 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
   9. Menginstall Python 2.7
 ![Installasi Python di Guest OS](instalasi/pythonGuest.png)
 
-  10. Mengaktifkan untuk menshare dari Host to Guest OS
-	Langkah langkahnya 
+  10. Mengaktifkan untuk menshare dari Host to Guest OS. Langkah langkahnya :
 
 		1. Pada bagian Device  -> Insert Guest Additions CD Image
 
@@ -212,7 +211,6 @@ suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi deng
 	```
   13. Konfigurasi Cuckoo
 	1. file cuckoo.conf
-
 		```
 		machinery = virtualbox
 		[resultserver]
