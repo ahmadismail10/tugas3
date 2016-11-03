@@ -20,7 +20,7 @@
 ## Dasar Teori
 
 
-**1. Cuckoo Sandbox**
+**1. Tools and Malware and file type **
 
 * **Cuckoo Sandbox** adalah 
 salah satu sistem yang digunakan untuk mengalisa malware / file yang mencurigakan yang terdapat didalam system dan memberikan hasil yang terperinci mengenai apa yang terjadi dan apa yang telah dilakukan oleh malware / file yang mencurigakan tersebut dalam hitungan detik.Cuckoo ini biasanya digunakan untuk mengetes malware yang ada didalam suatu lingkungan yang terisolasi.Dapat dijalankan diatas multiplaform OS.(https://cuckoosandbox.org)
@@ -28,7 +28,18 @@ salah satu sistem yang digunakan untuk mengalisa malware / file yang mencurigaka
 * **Malware** adalah 
 suatu sofware atau suatu file applikasi / suatu file tertentu yang disisipi dengan menggunakan code tertentu yang digunakan untuk mengambil data yang sensitif, atau mengganggu jalannya operasi komputer, atau mendapatkan suatu hak akses khusus, atau menampilkan iklan iklan yang tidak diinginkan. (https://en.wikipedia.org/wiki/Malware)
 
+* **.xls** adalah
+format binary file yang digunakan oleh microsoft excel dari MS Office 97, MS Excel 2000, MS Excel 2002, MS Excel 2003. 
+
 **2. Malware yang digunakan**
+* **1. Receipt.xls** adalah
+malicious file yang memanggil HTTP request, membuat proses analisis yang dilakukan menjadi lama, mencuri informasi pribadi yang disimpan dalam local browser, menginstall dirinya sendiri ketika pada saat autorun windows startup, mengambil informasi untuk membuat fingerprint system. (https://malwr.com/analysis/ZGRhZWJjNDY0MjI3NGRjYmJmNTFlNjJjYmZhNTUyN2I/)
+
+* **2. SKMBT_C22416020417390.xls** adalah
+malicious file yang memanggil HTTP request, membuat proses analisis yang dilakukan menjadi lama, mencuri informasi pribadi yang disimpan dalam local browser, menginstall dirinya sendiri ketika pada saat autorun windows startup, dan membuat alternate data stream.
+
+* **3. myaccs _6_.xls** adalah
+file / program yang memanggil HTTP request, mencuri informasi pribadi yang disimpan dalam local browser, menginstall dirinya sendiri ketika pada saat autorun windows startup, membuat proses analisis yang dilakukan menjadi lama, membuat sebuah copy dari dirinya sendiri dan ada sedikit perubahan dengan yang original yang didapat, dan membuat ICMP traffic.
 
 
 ## Persiapan
